@@ -1,10 +1,12 @@
 development:
-  adapter: async
+  adapter: redis
+  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+  channel_prefix: rails-chatbot-6
 
 test:
-  adapter: test
+  adapter: async
 
 production:
   adapter: redis
   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  channel_prefix: chat_bot_6_production
+  channel_prefix: rails-chatbot-6
