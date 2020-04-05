@@ -32,9 +32,9 @@
             </div>
           </div>
       <% end %>
-    </div>
+  </div>
 
-    <%= form_for @room_message, remote: true do |form| %>
+  <%= form_for @room_message, remote: true do |form| %>
         <div class="input-group mb-3">
           <%= form.text_field :message, as: :string,
               wrapper: false,
@@ -48,7 +48,7 @@
         </div>
 
         <%= form.hidden_field :room_id%>
-    <% end %>
+  <% end %>
   </div>
 </div>
 
